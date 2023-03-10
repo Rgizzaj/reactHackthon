@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react"
+<<<<<<< HEAD
 import { useParams } from "react-router-dom";
+=======
+import AlbumResults from "./AlbumResults"
+>>>>>>> b2c2b10c4ea904dd7b2f0072fe5129f1c9c60bac
 
 export default function ArtistDetail(){
 
@@ -15,6 +19,7 @@ export default function ArtistDetail(){
     useEffect(()=>{
         fetchApi()
     },[artist])
+<<<<<<< HEAD
     // return(
     //     <div>
     //         {console.log(artist)}
@@ -34,3 +39,8 @@ export default function ArtistDetail(){
 }
 
 <Link to="/"> return to Homepage </Link>
+=======
+    return(
+   <AlbumResults artist={artist}/>)
+}
+>>>>>>> b2c2b10c4ea904dd7b2f0072fe5129f1c9c60bac
