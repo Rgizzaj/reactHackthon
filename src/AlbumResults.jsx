@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
 
 export default function AlbumResults(props){
     return(
         <div>
+            <Link to='/'>Back to Homepage</Link>
+
             {console.log(props.artist)}
             {
              props.artist.map((artists,index)=>{
@@ -15,6 +18,9 @@ export default function AlbumResults(props){
                 
             }
           
+
+          
         </div>
     )
 }
+

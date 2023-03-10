@@ -20,5 +20,8 @@ export default function ArtistDetail(){
    <AlbumResults artist={artist}/>
    :
    "...Loading"
+
+   
    )
+  
 }
