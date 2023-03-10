@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
 
 export default function ArtistDetail(){
+
+    const {id} = useParams()
+
+
     const [artist,setArtist]=useState([])
     const fetchApi=async()=>{
-        const response = await fetch("https://musicbrainz.org/ws/2/release?artist=944e1036-8a03-4611-8aa0-31515a05c848&fmt=json")
+        const response = await fetch(`https://musicbrainz.org/ws/2/artist/${id}?fmt=json&inc=releases`)
         const data = await response.json()
-        setArtist(data.releases)
+        setArtist(data)
     }
     useEffect(()=>{
         fetchApi()
@@ -27,3 +32,5 @@ export default function ArtistDetail(){
     //     </div>
     // )
 }
+
+<Link to="/"> return to Homepage </Link>
