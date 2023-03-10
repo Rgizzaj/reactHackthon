@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import AlbumResults from "./AlbumResults"
 
 export default function ArtistDetail(){
     const [artist,setArtist]=useState([])
@@ -10,20 +11,6 @@ export default function ArtistDetail(){
     useEffect(()=>{
         fetchApi()
     },[artist])
-    // return(
-    //     <div>
-    //         {console.log(artist)}
-    //         {
-                
-    //             artist.map((person,index)=>
-    //             {
-    //                 return(
-    //                     <div key={index}>
-    //                     <h3>{person.title}</h3>
-    //                     </div>
-    //                 )
-    //             })
-    //         }
-    //     </div>
-    // )
+    return(
+   <AlbumResults artist={artist}/>)
 }
