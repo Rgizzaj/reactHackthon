@@ -2,11 +2,19 @@
 export default function AlbumResults(props){
     return(
         <div>
-             
-            <h3>{props.artist.name}</h3>
-            <p>{props.artist.country}</p>
-            <p>{props.artist.date}</p>                     
-                    
+            {console.log(props.artist)}
+            {
+             props.artist.map((artists,index)=>{
+                return(
+                <div key={index}>
+<h3>{artists.title}</h3>
+                <p>{artists.country}</p>
+                <p>{artists.date}</p> 
+                </div>)
+             })
+                
+            }
+          
         </div>
     )
 }
