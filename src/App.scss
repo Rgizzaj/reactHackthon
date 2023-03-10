@@ -4,6 +4,7 @@
   padding: 2rem;
   text-align: center;
   background-color: #111111;
+  border-radius: 15px;
 }
 
 .logo {
@@ -12,9 +13,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -23,6 +26,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,11 +45,17 @@
 .read-the-docs {
   color: #888;
 }
-.App{
+
+.App {
   background-color: #fffffa;
-  color: #394118
+  color: #394118;
+  border-radius: 15px;
+  padding: 5px;
 }
-Link{
-  color:#ffffff
+
+.search {
+
+  margin: 10px;
+  border-radius: 5px;
 }
 
