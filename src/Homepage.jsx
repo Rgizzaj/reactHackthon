@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import SearchBar from "./SearchBar";
-import SearchResults from "./SearchResults";
+import './Homepage.scss'
 
 
 export default function Homepage (){
@@ -25,13 +24,13 @@ export default function Homepage (){
         const data = await response.json();
         console.log(data);
 
-        setArtists(data.artists);
-       
-        //onChange activation
-
-       
+        setArtists(data.artists);                 
+      
         
     }
+
+    
+     //onChange activation
      const handleChange = (e) => {
             setInputValue(e.target.value)  
         }
@@ -67,30 +66,30 @@ return(
         <ul 
             key= { index }
             > 
-                <li>{artist.name}</li>
-        
-              
+            <div className="Artist__name">
+                <p>{artist.name}</p>  
+
+            </div>
+
                 { artist.aliases
                 ?
-                <li>
+                <p>
                 {artist.aliases.map((alias)=> {
                     return  alias.name})}
-                </li>
+                </p>
                 :    
                 "no aliases"
                 })            
                 
-           
-                <li>{artist.country}</li> 
+                <p>{artist.country}</p> 
              
-                             
-                <li>{artist['life-span'].begin}</li>                 
+                <p>{artist['life-span'].begin}</p>               
                            
             </ul> 
            
         
         ) : 
-                "no artist found"
+        ""
 
       
         }
