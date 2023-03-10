@@ -1,9 +1,10 @@
 import ArtistDetail from "./ArtistDetail";
+import Homepage from "./Homepage";
 
 const routes=[
     {
         path: '/',
-        element: <App />
+        element: <Homepage/>
     },
     {
         path: '/releases',
