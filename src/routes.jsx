@@ -9,6 +9,10 @@ const routes=[
     {
         path: '/releases',
         element: <ArtistDetail />
+    },
+    {
+        path: '/artist/:id',
+        element: <ArtistDetail />
     }
 ]
 

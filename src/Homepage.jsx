@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './Homepage.scss'
+import { Link } from "react-router-dom";
 
 
 export default function Homepage (){
@@ -54,11 +55,11 @@ return(
                 onChange={handleChange}     
                 />
 
-            </div>
+        </div>
         
         <button onClick={() => {setSearchQuery(inputValue)}}>SearchBar</button>
-
-        
+        <h2>Results</h2>
+       
 
         { artists.length >0 ? 
        artists.map((artist, index) => 
@@ -67,23 +68,26 @@ return(
             key= { index }
             > 
             <div className="Artist__name">
-                <p>{artist.name}</p>  
+              <Link to={`/artist/${artist.id}` }
+              ><p>Name: {artist.name}</p></Link>
 
             </div>
-
+            
+            <div className="Artist__aliases">
                 { artist.aliases
                 ?
-                <p>
+                <p>Aliases:
                 {artist.aliases.map((alias)=> {
                     return  alias.name})}
                 </p>
                 :    
-                "no aliases"
-                })            
+                "No Aliases Found!"
+                }  
+            </div>          
                 
-                <p>{artist.country}</p> 
+                <p>Country: {artist.country}</p> 
              
-                <p>{artist['life-span'].begin}</p>               
+                <p>Life span: {artist['life-span'].begin}</p>               
                            
             </ul> 
            
