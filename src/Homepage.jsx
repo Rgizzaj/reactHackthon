@@ -84,18 +84,20 @@ return(
                 "No Aliases Found!"
                 }  
             </div>          
-                
+
+            <div className="Artist__country">  
                 <p>Country: {artist.country}</p> 
-             
+                </div>  
+            <div className="Artist__lifespan">
                 <p>Life span: {artist['life-span'].begin}</p>               
-                           
+                
+            </div>  
+
             </ul> 
            
         
         ) : 
-        ""
-
-      
+        ""      
         }
 
     </div>
